@@ -38,7 +38,7 @@ class Warrior extends Character {
     // Método exclusivo para el guerrero: strongAttack
     strongAttack() {
         // Calcula un número aleatorio entre 0 y attackPower y lo multiplica por 2
-        const damage = Math.floor(Math.random() * this.attackPower * 2);
+        const damage = Math.floor(Math.random() * this.attackPower) * 2;
         return damage;
     }
 }
@@ -53,7 +53,7 @@ class Healer extends Character {
     // Método exclusivo para el curandero: heal
     heal() {
         // Calcula un número aleatorio entre 0 y intelligence y lo multiplica por 2
-        const healing = Math.floor(Math.random() * this.intelligence * 2);
+        const healing = Math.floor(Math.random() * this.intelligence) * 2;
         return healing;
     }
 }
