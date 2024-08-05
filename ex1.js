@@ -1,10 +1,7 @@
 class Character {
     constructor(name, attackPower, intelligence, hitPoints) {
         this.name = name;
-        this.attackPower = attackPower;
-        this.intelligence = intelligence;
-        this.hitPoints = hitPoints;
-        this.level = 0;
+        // COMPLETAR
     }
 
     // Método para subir de nivel
