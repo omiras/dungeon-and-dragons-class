@@ -24,14 +24,14 @@ class Character {
 
     // Método estático para comparar niveles de dos personajes
     static compareLevels(character1, character2) {
-            if (character1.level > character2.level) {
-                return 1;
-            } else if (character1.level < character2.level) {
-                return -1;
-            } else {
-                return 0;
-            }
+        if (character1.level > character2.level) {
+            return 1;
+        } else if (character1.level < character2.level) {
+            return -1;
+        } else {
+            return 0;
         }
+    }
 }
 
 // Definición de la subclase Warrior
@@ -44,7 +44,7 @@ class Warrior extends Character {
     // Método exclusivo para el guerrero: strongAttack
     strongAttack() {
         // Calcula un número aleatorio entre 0 y attackPower y lo multiplica por 2
-        const damage = Math.floor(Math.random() * this.attackPower * 2);
+        const damage = Math.floor(Math.random() * this.attackPower) * 2;
         return damage;
     }
 }
@@ -59,7 +59,7 @@ class Healer extends Character {
     // Método exclusivo para el curandero: heal
     heal() {
         // Calcula un número aleatorio entre 0 y intelligence y lo multiplica por 2
-        const healing = Math.floor(Math.random() * this.intelligence * 2);
+        const healing = Math.floor(Math.random() * this.intelligence) * 2;
         return healing;
     }
 }
@@ -90,7 +90,7 @@ const comparisonResult_3 = Character.compareLevels(warrior, healer);
 console.log(`Comparación de niveles: ${comparisonResult_3}`); // Debería devolver -1 porque Luna tiene más nivel que Thor
 
 // BONUS: Usa el método sort y el método estático compareLevels para ordenar adecuadamente el array de personajes de menor a mayor level
-let characters = [healer, cleverWarrior, warrior, ];
-console.log('Antes de aplicar el sort: ', characters.map(c=> `${c.name} - level ${c.level}`)); // Los perosnajes estan desordenador por nivel
+let characters = [healer, cleverWarrior, warrior,];
+console.log('Antes de aplicar el sort: ', characters.map(c => `${c.name} - level ${c.level}`)); // Los perosnajes estan desordenador por nivel
 characters.sort(Character.compareLevels);
-console.log('Después de aplicar el sort: ', characters.map(c=> `${c.name} - level ${c.level}`)); // Los perosnajes deberían estar oredenador de menor a mayor nivel
+console.log('Después de aplicar el sort: ', characters.map(c => `${c.name} - level ${c.level}`)); // Los perosnajes deberían estar oredenador de menor a mayor nivel
